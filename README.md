@@ -1,1 +1,1 @@
-# myProject
+# How to Clone
