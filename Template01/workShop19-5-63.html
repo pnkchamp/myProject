@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <script src="js/bootstrap.min.js"></script>
+ 
+    <title>ภพ.01</title>
+</head>
+<body>
+
+    <!--Header-->
+            <div class="container-fluid p-0" id="background-header">
+                <div class="row mx-auto my-auto">
+                  <div class=" col text-left">
+                    <img id="logo" src="img/logo.png" height="90"> <br>
+                    
+                </div>
+            
+                        <div class="col my-auto text-right">
+                         <b>รหัสผู้ใช้ : </b> TEST TEST <b>รหัสหน้าจอ :</b> VPP010001 v.2.0  <b>วันที่/เวลาเข้าสู่ระบบ :</b> 17/5/2563 16.26 น.     <br>
+                         <b>รหัสสำนักงาน : </b>สำนักงานสรรพากรพื้นที่กรุงเทพมหานคร 3 <br>
+                         <b>เลขระบุเอกสาร :</b> 04120010-25480613-1-01-000001 <br>
+                         <b>เลขที่ชุดเอกสาร :</b> ภพ01-0412000-120010-1-0125480613-0-0-0001-00
+                         
+                        </div>                
+                </div>
+            </div>
+    <!--Header-->
+    <!--Nav-->
+            <form class="form-inline float-right mt-1">
+                <select class="form-control form-control-sm inline">
+                    <option>เปิดให้บันทึกข้อมูล</option>
+                </select>
+                <button type="button" class="btn-sm btn-primary mx-1">[F8] ปรับปรุงสถานะ</button> 
+            </form> 
+        <div class="container p-0">
+            <div class="bread-crumb nav">  
+                <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">ที่อยู่</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">ข้อมูลประเภทของกิจการ</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">ชื่อและที่ตั้งสาขา</a>       
+            </div>
+        </div>
+        </div>
+     </div>
+
+    <!--Nav-->
+    <div class="container"id="background-form">
+              <div class="tab-content" id="nav-tabContent">
+                    <!--TAB ที่อยู่-->
+                <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="container-form">
+                            <form>
+                                <div class="form-row">
+                                    <label for="" class="col-lg-2 col-md-4 col-sm-5 col-form-label">เลขประจำตัวผู้เสียภาษีอากร</label>
+                                    <div class="col-lg-2 col-md-4 col-sm-5">
+                                        <input type="" class="form-control form-control-sm" maxlength="13" placeholder="กรุณากรอกเลข TIN/NID">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <label class="col-lg-2 col-md-4 col-sm-5 col-form-label">ชื่อผู้ประกอบกิจการ</label>
+                                    <div class="col-lg-2 col-md-4 col-sm-5">
+                                        <input type="" class="form-control form-control-sm dotted" disabled value="แชมป์เปี้ยน">
+                                    </div>
+                                 </div> 
+                                 <div class="form-row">
+                                    <label class="col-lg-2 col-md-4 col-sm-5 col-form-label">สัญชาติ</label>
+                                    <div class="col-lg-2 col-md-4 col-sm-5">
+                                        <input type="" class="dotted form-control form-control-sm" disabled value="ไทย">
+                                    </div>
+                                 </div>                       
+                            </form> 
+                                <!--ที่อยู่-->
+                            <form class="container"> 
+                                <div class="header-form text-center mb-2">ที่อยู่</div>
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">อาคาร</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก อาคาร">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ห้องเลขที่</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ห้องเลขที่">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ชั้นที่</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ชั้นที่">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ชื่อหมู่บ้าน</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ชื่อหมู่บ้าน">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ตรอก/ซอย</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ตรอก/ซอย">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">แยก</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก แยก">
+                                    </div>
+                                </div>  
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ถนน</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ถนน">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ตำบล/แขวง</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ตำบล/แขวง">
+                                    </div>
+                                </div> 
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">อำเภอ/เขต</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก อำเภอ/เขต">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">จังหวัด</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก จังหวัด">
+                                    </div>
+                                </div>                                                                                            
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">รหัสไปรษณีย์</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก รหัสไปรษณีย์">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">โทรศัพท์</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก โทรศัพท์">
+                                    </div>
+                                </div>
+                            </form>
+                             <!--ชื่อและที่ตั้งสถานประกอบการ-->
+                            <div class="container">
+                            <form>
+                                <div class="header-form text-center">ชื่อและที่ตั้งสถานประกอบการ</div>
+                                <div class="form-row">
+                                    <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">คำนำหน้าชื่อ</label>
+                                    <div class="col-lg-3 col-md-4 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก คำนำหน้าชื่อ">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ชื่อสถานประกอบการ</label>
+                                    <div class="col-lg-9 col-md-9 col-sm-7">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ชื่อสถานประกอบการ">
+                                    </div>
+                                </div>                          
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">อาคาร</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก อาคาร">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ห้องเลขที่</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ห้องเลขที่">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ชั้นที่</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ชั้นที่">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ชื่อหมู่บ้าน</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ชื่อหมู่บ้าน">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ตรอก/ซอย</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ตรอก/ซอย">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">แยก</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก แยก">
+                                    </div>
+                                </div>  
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ถนน</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ถนน">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ตำบล/แขวง</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ตำบล/แขวง">
+                                    </div>
+                                </div> 
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">อำเภอ/เขต</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก อำเภอ/เขต">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">จังหวัด</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก จังหวัด">
+                                    </div>
+                                </div>                                                                                            
+                                <div class="form-row">
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">รหัสไปรษณีย์</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก รหัสไปรษณีย์">
+                                    </div>
+                                          <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">โทรศัพท์</label>
+                                    <div class="col-lg-3 col-md-3 col-sm-5">
+                                          <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก โทรศัพท์">
+                                    </div>
+                                </div>
+                            </form>
+                            <!--สมาคมปุ่มต่างๆ-->
+                                <div class="form-row mt-4 justify-content-end">
+                                    <button type="button" class="btn btn-primary size-button">[F4]บันทึกชั่วคราว</button>
+                                    <button type="button" class="btn btn-primary size-button">[F6]ล้างข้อความ</button>
+                                    <button type="button" class="btn btn-danger size-button">[F7]ยกเลิก</button>
+                                    <button type="button" class="btn btn-dark size-button">[F9]ออกจากระบบ</button>
+                                </div>       
+                            </div>                          
+                    </div>
+                </div>                        
+                    <!--TAB ข้อมูลประเภทของกิจการ-->
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"> 
+                            <div class="container-form">  
+                                <div class="form-row">                                                             
+                                    <label class="col-1 col-form-label">3.</label>
+                                    <input type="" style="width:30px;"  maxlength="1" class="form-control text-center form-control-sm mr-2">
+                                    <label class="col col-form-label">กรณีขอจะทะเบียนก่อนวันเริ่มกิจการตามข้อ 1 ของประกาศอธิบดีกรมสรรพากร เกี่ยวกับภาษีมูลค่าเพิ่ม</label>                                 
+                                </div>
+                                <div class="form-row"> 
+                                    <label class="col-1"> </label>                                            
+                                    <input type="" style="width:30px;"  maxlength="1" class="form-control text-center form-control-sm mr-2">
+                                    <label class="col-7 col-lg-4 col-md-6 col-sm-7 col-form-label">วันที่รายรับถึงเกณฑ์จดทะเบียน</label>     
+                                    <input type="" style="width:70px;"  maxlength="1" class="form-control text-center form-control-sm mr-2">                            
+                                </div>
+                                <div class="form-row"> 
+                                    <label class="col-1"> </label>                                            
+                                    <input type="" style="width:30px;"  maxlength="1" class="form-control text-center form-control-sm mr-2">
+                                    <label class="col-7 col-lg-4 col-md-6 col-sm-7 col-form-label">วันที่แจ้งต่ออธิบดีเพื่อขอจดทะเบียนภาษีมูลค่าเพิ่ม</label>     
+                                    <input type="" style="width:70px;"  maxlength="1" class="form-control text-center form-control-sm mr-2">                            
+                                </div>
+                                <div class="form-row">                                     
+                                    <label class="col col-form-label">ในวันที่ยื่นคำขอจดทะเบียนภาษีมูลค่าเพิ่มมี</label>                                 
+                                </div>
+                                <div class="form-row"> 
+                                    <label class="col-1"> </label>                                    
+                                    <label class="col-5 col-lg-2 col-md-3 col-sm-4 col-form-label">(1) เงินทุนจดทะเบียน</label> 
+                                    <input type="" style="width:200px;"  class="form-control form-control-sm mr-2">                                
+                                </div>
+                                <div class="form-row"> 
+                                    <label class="col-1"> </label>                                    
+                                    <label class="col-5 col-lg-2 col-md-3 col-sm-4 col-form-label">(2) รายรับประมาณเดือนละ</label> 
+                                    <input type="" style="width:200px;"  class="form-control form-control-sm mr-2">                                
+                                </div>
+                                <div class="header-form text-center">ประเภทของการประกอบกิจการ</div>
+                                <div class="form-row">                                                             
+                                    <label class="col-5 col-form-label">รหัสประเภทกิจการ</label>                                                                                        
+                                </div>
+                                <div class="form-row">                                                             
+                                    <label class="col-2 col-lg-1 col-md-2 col-sm-2 col-form-label">1=ผลิต</label>    
+                                    <label class="col-2 col-lg-1 col-md-2 col-sm-2 col-form-label">2=ผลิต</label>    
+                                    <label class="col-2 col-lg-1 col-md-2 col-sm-2 col-form-label">3=ขายส่ง</label>    
+                                    <label class="col-3 col-lg-1 col-md-2 col-sm-2 col-form-label">4=ขายปลีก</label>    
+                                    <label class="col-3 col-lg-1 col-md-2 col-sm-2 col-form-label">5=ให้บริการ</label>                                                                                        
+                                </div>
+                                <div class="form-row">                                                             
+                                    <table class="table text-center">
+                                        <thead>
+                                          <tr>
+                                            <th>ลำดับที่(ตามจำนวนรายรับจากมากไปน้อย)</th>
+                                            <th>รหัสประเภทกิจการ</th>
+                                            <th>ประเภทสินค้าและ/หรือบริการ</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1.</td>
+                                            <td>21A</td>
+                                            <td>21C</td> 
+                                                                                                             
+                                          </tr>
+                                          <tr>
+                                            <td>2.</td>
+                                            <td>22A</td>
+                                            <td>22C</td> 
+                                          </tr>
+                                          <tr>
+                                            <td>3.</td>
+                                            <td>23A</td>
+                                            <td>23C</td>
+                                          </tr>
+                                          <tr>
+                                            <td>4.</td>
+                                            <td>24A</td>
+                                            <td>24C</td>
+                                          </tr>
+                                          <tr>
+                                            <td>5.</td>
+                                            <td>25A</td>
+                                            <td>25C</td>
+                                          </tr>
+                                          <tr>
+                                            <td>6.</td>
+                                            <td>26A</td>
+                                            <td>26C</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>                                                                              
+                                </div>
+                                <div class="form-row">
+                                    <label for="" class="col-lg-4 col-md-7 col-sm-12 col-form-label">อนุมัติให้เป็นผู้ประกอบการจดทะเบียนภาษีมูลค่าเพิ่ม ตั้งแต่วันที่</label>
+                                    <div class="col-lg-4 col-md-5 col-sm-12">
+                                        <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก">
+                                    </div>
+                                </div>
+                                <div class="form-row mt-4 justify-content-end">
+                                    <button type="button" class="btn btn-primary size-button">[F4]บันทึกชั่วคราว</button>
+                                    <button type="button" class="btn btn-primary size-button">[F6]ล้างข้อความ</button>
+                                    <button type="button" class="btn btn-danger size-button">[F7]ยกเลิก</button>
+                                    <button type="button" class="btn btn-dark size-button">[F9]ออกจากระบบ</button>
+                                </div>      
+                            </div>
+                </div>
+ 
+                
+                    <!--TAB ชื่อที่ตั้งสาขา-->
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="container-form"> 
+                    <form>
+                        <div class="form-row">
+                            <label for="" class="col-lg-2 col-md-4 col-sm-5 col-form-label">ชื่อและที่ตั้งสาขาจำนวนทั้งสิ้น </label>
+                            <div class="col-lg-2 col-md-4 col-sm-5">
+                                <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก จำนวนสาขา">
+                            </div>
+                        </div>
+                        <div class="form-row mb-4">
+                            <label class="col-lg-2 col-md-4 col-sm-5 col-form-label">สาขาที่</label>
+                            <div class="col-lg-2 col-md-4 col-sm-5">
+                                <input type="" class="form-control form-control-sm" placeholder="กรุณากรอก สาขาที่">
+                            </div>
+                         </div>  
+                         <div class="form-row">
+                            <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">คำนำหน้าชื่อ</label>
+                            <div class="col-lg-3 col-md-4 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก คำนำหน้าชื่อ">
+                            </div>
+                        </div>
+                        <div class="form-row mb-4">
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ชื่อ</label>
+                            <div class="col-lg-9 col-md-9 col-sm-7">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ชื่อ">
+                            </div>
+                        </div>  
+                    </div> 
+                    <div class="container">                       
+                        <div class="form-row">
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ที่อยู่ : อาคาร</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก อาคาร">
+                            </div>
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ห้องเลขที่</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ห้องเลขที่">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ชั้นที่</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ชั้นที่">
+                            </div>
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ชื่อหมู่บ้าน</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ชื่อหมู่บ้าน">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ตรอก/ซอย</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ตรอก/ซอย">
+                            </div>
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">แยก</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก แยก">
+                            </div>
+                        </div>  
+                        <div class="form-row">
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ถนน</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ถนน">
+                            </div>
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">ตำบล/แขวง</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก ตำบล/แขวง">
+                            </div>
+                        </div> 
+                        <div class="form-row">
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">อำเภอ/เขต</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก อำเภอ/เขต">
+                            </div>
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">จังหวัด</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก จังหวัด">
+                            </div>
+                        </div>                                                                                            
+                        <div class="form-row">
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">รหัสไปรษณีย์</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก รหัสไปรษณีย์">
+                            </div>
+                                  <label for="" class="col-lg-3 col-md-3 col-sm-5 col-form-label">โทรศัพท์</label>
+                            <div class="col-lg-3 col-md-3 col-sm-5">
+                                  <input type="" class="form-control form-control-sm"  placeholder="กรุณากรอก โทรศัพท์">
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                    <!--สมาคมปุ่มต่างๆ-->
+                    <div class="form-row mt-4 justify-content-end">
+                        <button type="button" class="btn btn-primary size-button"> |&lt;&lt;รายการแรก</button>
+                        <button type="button" class="btn btn-primary size-button">&lt; รายการก่อนหน้า</button>
+                        <button type="button" class="btn btn-primary size-button">รายการถัดไป &gt;</button>
+                        <button type="button" class="btn btn-primary size-button">รายการสุดท้าย &gt;&gt;|</button>
+                        <button type="button" class="btn btn-primary size-button">ปรับปรุงสาขา</button>
+                        <button type="button" class="btn btn-primary size-button">ไปสาขาที่</button>
+                    </div>      
+                        <div class="form-row justify-content-end">
+                            <button type="button" class="btn btn-success size-mini">เพิ่ม</button>
+                            <button type="button" class="btn btn-danger size-mini">ลบ</button>
+                            <button type="button" class="btn btn-primary size-button">[F2]บันทึก</button>
+                            <button type="button" class="btn btn-primary size-button">[F4]บันทึกชั่วคราว</button>
+                            <button type="button" class="btn btn-primary size-button">[F6]ล้างข้อความ</button>
+                            <button type="button" class="btn btn-danger size-button">[F7]ยกเลิก</button>
+                            <button type="button" class="btn btn-dark size-button">[F9]ออกจากระบบ</button>
+                        </div>       
+                    </div>                          
+            </div>                                            
+                    </form> 
+                </div>
+                
+                </div>
+         </div>
+
+
+
+        
+        
+
+
+
+
+
+
+    
+
+        
+        <!--/Header-->
+        
+        <!--Main-->
+            
+        <!--/Main-->
+
+
+   
+
+
+
+
+
+    
+</body>
+<script>
+    $(function() {
+     $(".mGrid >input").on('keyup', function(e) {
+ if (e.which === 13) {
+   $(this).next('input').focus();
+ }
+});
+});
+
+ </script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</html>
