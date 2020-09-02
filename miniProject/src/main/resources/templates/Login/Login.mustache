@@ -1,17 +1,29 @@
-{{>layout/head-layout}}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&family=Taviraj&display=swap" rel="stylesheet">
+    <script src="js/showhide.js" ></script>
+    <title>{{title}}</title>
+</head>
+<body>
 
    <div class="container">
          <div class="row pt-3">
                <h3><b>รายละเอียดการขายสินค้าออนไลน์</b></h3>
         </div>  <hr class="my-3">
           <div class="row pb-1">
-              <h5>1. ช่องทางการจำหน่ายสินค้าหรือให้บริการผ่านออนไลน์ (โปรดระบุให้ครบทุกช่องทาง)</h5>
+              <h5>๑. ช่องทางการจำหน่ายสินค้าหรือให้บริการผ่านออนไลน์ (โปรดระบุให้ครบทุกช่องทาง)</h5>
          </div>
         <div class="row">
-            <label class="checkbox" for="myCheckboxId">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId" onclick="myFunction()">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId" onclick="Mycheckbox('myCheckboxId','commerce')">
                 <div class="checkbox_box"></div> 
-                e – Commerce Platform
+                e–Commerce Platform
             </label> 
          </div>    
         <div class="row" id="commerce" style="display:none">
@@ -25,7 +37,7 @@
             </ul>
         </div> 
         <div class="row">
-            <label class="checkbox" for="myCheckboxId1">
+            <label class="checkbox">
                 <input type="checkbox" class="checkbox_input" id="myCheckboxId1" onclick="myFunction1()">
                 <div class="checkbox_box"></div> 
                 Platform จองโรงแรม
@@ -43,7 +55,7 @@
             </ul>
         </div> 
         <div class="row">
-            <label class="checkbox" for="myCheckboxId2">
+            <label class="checkbox">
                 <input type="checkbox" class="checkbox_input" id="myCheckboxId2"onclick="myFunction2()">
                 <div class="checkbox_box"></div> 
                บริการ Delivery / Food Delivery
@@ -75,12 +87,67 @@
             </ul>
         </div>  
         <div class="row">
-            <label class="checkbox" for="myCheckboxId4">
+            <label class="checkbox">
                 <input type="checkbox" class="checkbox_input" id="myCheckboxId4">
                 <div class="checkbox_box"></div> 
               มีเว็บไซต์ของตนเอง โปรดระบุ………………………..…………….
             </label>
-        </div> 
+        </div>
+        <div class="row pb-1">
+              <h5>๒. ช่องทางการจำหน่ายสินค้าหรือให้บริการผ่านออนไลน์ (โปรดระบุให้ครบทุกช่องทาง)</h5>
+         </div> 
+         <div class="row">
+            <label class="checkbox" >
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId3" onclick="">
+                <div class="checkbox_box"></div> 
+              สถาบันการเงิน (รวมทุกช่องทาง Online Banking / Mobile Banking / Internet Banking ฯลฯ)
+            </label>
+        </div>
+         <div class="row"  id="commerce3" style="display:none">
+            <ul>
+                <li>ชื่อบัญชี.........................เลขที่  บัญชี/เลขพร้อมเพย์...............................ชื่อธนาคาร............................</li>
+                <li>ชื่อบัญชี.........................เลขที่บัญชี/เลขพร้อมเพย์...............................ชื่อธนาคาร............................</li>
+            </ul>
+        </div>  
+        <div class="row">
+            <label class="checkbox" >
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId3" onclick="">
+                <div class="checkbox_box"></div> 
+              ผู้ให้บริการเงินอิเล็คทรอนิกส์ (e – Wallet)
+            </label>
+        </div>
+         <div class="row"  id="commerce3" style="display:none">
+            <ul>
+                <li>Rabbit LINE Pay</li>
+                <li>TrueMoney Wallet</li>
+                <li>PayPal</li>
+                <li>AirPay wallet</li>
+                <li>อื่น ๆ โปรดระบุ ………………………..…………….</li>
+            </ul>
+        </div>  
+         <div class="row">
+            <label class="checkbox" >
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId3" onclick="">
+                <div class="checkbox_box"></div> 
+             เก็บเงินปลายทางเป็นเงินสด
+            </label>
+        </div>
+         <div class="row">
+            <label class="checkbox" >
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId3" onclick="">
+                <div class="checkbox_box"></div> 
+              ระบบการรับชำระเงินภายในแพลตฟอร์มของผู้ให้บริการ
+            </label>
+        </div>
+                 <div class="row">
+            <label class="checkbox" >
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId3" onclick="">
+                <div class="checkbox_box"></div> 
+              อื่น ๆ โปรดระบุ...................................
+            </label>
+        </div>
     </div>
-
-{{>layout/foot-layout}}
+</body>
+  <script src="https://kit.fontawesome.com/350e34b2bb.js" crossorigin="anonymous"></script>
+   <script src="js/showhide.js" ></script>
+</html>

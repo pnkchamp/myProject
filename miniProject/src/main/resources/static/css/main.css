@@ -3,10 +3,6 @@ body{
     font-size: 16px;
 }
 
-li{
-    font-size: 14px;
-}
-
 .checkbox {
     display:inline-flex;
     align-items: center;
@@ -41,11 +37,17 @@ li{
     transform: scale(0);
     transition: transform 0.15s;
 }
+.checkbox_box::after > ul{
+    font-size: 20px;
+}
 .checkbox_input:checked + .checkbox_box{
     background-color: #16AF26;
     border-color: #16AF26;
+    
 }
+
 
 .checkbox_input:checked + .checkbox_box::after{
     transform: scale(1);
+    
 }
