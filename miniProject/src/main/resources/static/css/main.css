@@ -6,8 +6,9 @@ body{
 li{
     font-size: 14px;
 }
+
 .checkbox {
-        display:inline-flex;
+    display:inline-flex;
     align-items: center;
     cursor: pointer;
 
