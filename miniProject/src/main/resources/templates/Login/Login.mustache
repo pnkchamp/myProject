@@ -1,5 +1,45 @@
 {{>layout/head-layout}}
- 
+    <script>
+        function myFunction() {
+        var checkBox = document.getElementById("myCheckboxId");
+        var commerce = document.getElementById("commerce");
+            if (checkBox.checked == true){
+                commerce.style.display = "block";
+            } else {
+                commerce.style.display = "none";
+            }
+        }
+
+        function myFunction1() {
+        var checkBox = document.getElementById("myCheckboxId1");
+        var commerce = document.getElementById("commerce1");
+            if (checkBox.checked == true){
+                commerce.style.display = "block";
+            } else {
+                commerce.style.display = "none";
+            }
+        }
+
+         function myFunction2() {
+        var checkBox = document.getElementById("myCheckboxId2");
+        var commerce = document.getElementById("commerce2");
+            if (checkBox.checked == true){
+                commerce.style.display = "block";
+            } else {
+                commerce.style.display = "none";
+            }
+        }
+
+         function myFunction3() {
+        var checkBox = document.getElementById("myCheckboxId3");
+        var commerce = document.getElementById("commerce3");
+            if (checkBox.checked == true){
+                commerce.style.display = "block";
+            } else {
+                commerce.style.display = "none";
+            }
+        }
+    </script>
    <div class="container">
          <div class="row pt-3">
                <h3><b>รายละเอียดการขายสินค้าออนไลน์</b></h3>
@@ -9,12 +49,12 @@
          </div>
         <div class="row">
             <label class="checkbox" for="myCheckboxId">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId">
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId" onclick="myFunction()">
                 <div class="checkbox_box"></div> 
                 e – Commerce Platform
             </label> 
          </div>    
-        <div class="row">
+        <div class="row" id="commerce" style="display:none">
             <ul>
                 <li>Lazada ระบุ URL ………………………………………..</li>
                 <li>Shopee ระบุ URL ……………………………………….</li>
@@ -26,30 +66,30 @@
         </div> 
         <div class="row">
             <label class="checkbox" for="myCheckboxId1">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId1">
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId1" onclick="myFunction1()">
                 <div class="checkbox_box"></div> 
                 Platform จองโรงแรม
             </label>
         </div> 
-        <div class="row">
+        <div class="row" id="commerce1" style="display:none">
             <ul>
                 <li>Agoda ระบุ URL ………………………………………..</li>
                 <li>Booking.com ระบุ URL ….………………………….</li>
                 <li>Expedia ระบุ URL ………………………………….….</li>
                 <li>AirBnb ระบุ URL ………………………………………..</li>
-                <li>Traveloka ระบุ URL …………………………………..</li>111
+                <li>Traveloka ระบุ URL …………………………………..</li>
                 <li>อื่น ๆ ระบุ…………………………………</li>
 
             </ul>
         </div> 
         <div class="row">
             <label class="checkbox" for="myCheckboxId2">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId2">
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId2"onclick="myFunction2()">
                 <div class="checkbox_box"></div> 
                บริการ Delivery / Food Delivery
             </label>   
         </div> 
-        <div class="row">
+        <div class="row" id="commerce2" style="display:none">
             <ul>
                 <li>GrabFood</li>
                 <li>LineMan</li>
@@ -60,12 +100,12 @@
         </div> 
         <div class="row">
             <label class="checkbox" for="myCheckboxId3">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId3">
+                <input type="checkbox" class="checkbox_input" id="myCheckboxId3" onclick="myFunction3()">
                 <div class="checkbox_box"></div> 
                Social Media
             </label>
         </div>
-         <div class="row">
+         <div class="row"  id="commerce3" style="display:none">
             <ul>
                 <li>facebook ระบุ URL…………..…………………………..</li>
                 <li>Instagram ระบุ URL……….……………….…………….</li>
@@ -83,13 +123,4 @@
         </div> 
     </div>
 
-
-
-
-
-
-
-
-
-    
 {{>layout/foot-layout}}
