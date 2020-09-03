@@ -1,86 +1,154 @@
 {{>layout/head-layout}}
-
-   <div class="container">
-         <div class="row pt-3">
-               <h3><b>รายละเอียดการขายสินค้าออนไลน์</b></h3>
-        </div>  <hr class="my-3">
-          <div class="row pb-1">
-              <h5>1. ช่องทางการจำหน่ายสินค้าหรือให้บริการผ่านออนไลน์ (โปรดระบุให้ครบทุกช่องทาง)</h5>
-         </div>
+    <div class="container">
+        <div class="row pt-3">
+            <h3><b>รายละเอียดการขายสินค้าออนไลน์</b></h3>
+        </div>
+        <hr class="my-3">
+        <div class="row pb-1">
+            <h5>1. ช่องทางการจำหน่ายสินค้าหรือให้บริการผ่านออนไลน์ (โปรดระบุให้ครบทุกช่องทาง)</h5>
+        </div>
         <div class="row">
-            <label class="checkbox" for="myCheckboxId">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId" onclick="myFunction()">
-                <div class="checkbox_box"></div> 
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_ecom" onclick="myFunction('cb_ecom','commerce')">
+                <div class="checkbox_box"></div>
                 e – Commerce Platform
-            </label> 
-         </div>    
-        <div class="row" id="commerce" style="display:none">
-            <ul>
-                <li>Lazada ระบุ URL ………………………………………..</li>
-                <li>Shopee ระบุ URL ……………………………………….</li>
-                <li>JD CENTRAL ระบุ URL ……………………………….</li>
-                <li>lnwShop ระบุ URL …………………………………….</li>
-                <li>อื่น ๆ ระบุ …………..……………………………………….</li>
-
-            </ul>
-        </div> 
-        <div class="row">
-            <label class="checkbox" for="myCheckboxId1">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId1" onclick="myFunction1()">
-                <div class="checkbox_box"></div> 
-                Platform จองโรงแรม
-            </label>
-        </div> 
-        <div class="row" id="commerce1" style="display:none">
-            <ul>
-                <li>Agoda ระบุ URL ………………………………………..</li>
-                <li>Booking.com ระบุ URL ….………………………….</li>
-                <li>Expedia ระบุ URL ………………………………….….</li>
-                <li>AirBnb ระบุ URL ………………………………………..</li>
-                <li>Traveloka ระบุ URL …………………………………..</li>
-                <li>อื่น ๆ ระบุ…………………………………</li>
-
-            </ul>
-        </div> 
-        <div class="row">
-            <label class="checkbox" for="myCheckboxId2">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId2"onclick="myFunction2()">
-                <div class="checkbox_box"></div> 
-               บริการ Delivery / Food Delivery
-            </label>   
-        </div> 
-        <div class="row" id="commerce2" style="display:none">
-            <ul>
-                <li>GrabFood</li>
-                <li>LineMan</li>
-                <li>FoodPanda</li>
-                <li>Get</li>
-                <li>อื่น ๆ โปรดระบุ………………………..…………….</li>
-            </ul>
-        </div> 
-        <div class="row">
-            <label class="checkbox" for="myCheckboxId3">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId3" onclick="myFunction3()">
-                <div class="checkbox_box"></div> 
-               Social Media
             </label>
         </div>
-         <div class="row"  id="commerce3" style="display:none">
+        <div class="row" id="commerce" style="display:none">
             <ul>
-                <li>facebook ระบุ URL…………..…………………………..</li>
-                <li>Instagram ระบุ URL……….……………….…………….</li>
-                <li>Line ระบุ Link Line / ID Line…….………………...</li>
-                <li>Youtube ระบุ URL……………….……………………….</li>
-                <li>อื่น ๆ โปรดระบุ………………………..…………….</li>
+                <form name="frm">
+                    <li>Lazada ระบุ: <input type="text" id="txt_lazada" name="txt_lazada"></li>
+                    <li>Shopee ระบุ: <input type="text" id="txt_shopee" name="txt_shopee"></li>
+                    <li>JD CENTRAL ระบุ: <input type="text" id="txt_jd" name="txt_jd"></li>
+                    <li>lnwShop ระบุ: <input type="text" id="txt_lnw" name="txt_lnw"></li>
+                    <li>อื่น ๆ ระบุ: <input type="text" id="txt_other_ecom" name="txt_other_ecom"></li>
+                </form>
             </ul>
-        </div>  
+        </div>
         <div class="row">
-            <label class="checkbox" for="myCheckboxId4">
-                <input type="checkbox" class="checkbox_input" id="myCheckboxId4">
-                <div class="checkbox_box"></div> 
-              มีเว็บไซต์ของตนเอง โปรดระบุ………………………..…………….
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_pf" onclick="myFunction('cb_pf','platform')">
+                <div class="checkbox_box"></div>
+                Platform จองโรงแรม
             </label>
-        </div> 
-    </div>
+        </div>
+        <div class="row" id="platform" style="display:none">
+            <ul>
+                <li>Agoda ระบุ: <input type="text" id="txt_agoda" name="txt_agoda"></li>
+                <li>Booking.com ระบุ: <input type="text" id="txt_booking" name="txt_booking"></li>
+                <li>Expedia ระบุ: <input type="text" id="txt_expedia" name="txt_expedia"></li>
+                <li>AirBnb ระบุ: <input type="text" id="txt_airbnb" name="txt_airbnb"></li>
+                <li>Traveloka ระบุ: <input type="text" id="txt_traveloka" name="txt_traveloka"></li>
+                <li>อื่น ๆ ระบุ: <input type="text" id="txt_other_platfom" name="txt_other_platfom"></li>
 
+            </ul>
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_deli" onclick="myFunction('cb_deli','delivery')">
+                <div class="checkbox_box"></div>
+                บริการ Delivery / Food Delivery
+            </label>
+        </div>
+        <div class="row" id="delivery" style="display:none">
+            <ul>
+                <li>GrabFood ระบุ: <input type="text" id="txt_grabfood" name="txt_grabfood"></li>
+                <li>LineMan ระบุ: <input type="text" id="txt_lineman" name="txt_lineman"></li>
+                <li>FoodPanda ระบุ: <input type="text" id="txt_foodpanda" name="txt_foodpanda"></li>
+                <li>Get ระบุ: <input type="text" id="txt_get" name="txt_get"></li>
+                <li>อื่น ๆ ระบุ: <input type="text" id="txt_other_delivery" name="txt_other_delivery"></li>
+            </ul>
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_social" onclick="myFunction('cb_social','social')">
+                <div class="checkbox_box"></div>
+                Social Media
+            </label>
+        </div>
+        <div class="row" id="social" style="display:none">
+            <ul>
+                <li>Facebook ระบุ: <input type="text" id="txt_fb" name="txt_fb"></li>
+                <li>Instagram ระบุ: <input type="text" id="txt_ig" name="txt_ig"></li>
+                <li>Line ระบุ Link Line / ID Line <input type="text" id="txt_line" name="txt_line"></li>
+                <li>Youtube ระบุ: <input type="text" id="txt_youtube" name="txt_youtube"></li>
+                <li>อื่น ๆ ระบุ: <input type="text" id="txt_other_social" name="txt_other_social"></li>
+            </ul>
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_other" onclick="myFunction('cb_other','other')">
+                <div class="checkbox_box"></div>
+                มีเว็บไซต์ของตนเอง
+            </label>
+        </div>
+        <div class="row" id='other' style="display:none">
+            <ul>
+                <li>ระบุ: <input type="text" id="txt_other_me" name="txt_other_me"></li>
+        </div>
+        <div class="row pb-1">
+            <h5>2. ช่องทางการรับชำระเงิน (โปรดระบุให้ครบทุกช่องทาง)</h5>
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_onlinebanking"
+                    onclick="myFunction('cb_onlinebanking','onlinebanking')">
+                <div class="checkbox_box"></div>
+                สถาบันการเงิน (รวมทุกช่องทาง Online Banking / Mobile Banking / Internet Banking ฯลฯ)
+            </label>
+        </div>
+        <div class="row" id="onlinebanking" style="display:none">
+            <ul>
+                <li>ชื่อบัญชี: <input type="text" id="txt_name_banking" name="txt_name_banking"> เลขบัญชี/เลขพร้อมเพย์:
+                    <input type="text" id="txt_number_banking" name="txt_number_banking"> ชื่อธนาคาร: <input type="text"
+                        id="txt_bank" name="txt_bank"></li>
+            </ul>
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_eWallet" onclick="myFunction('cb_eWallet','eWallet')">
+                <div class="checkbox_box"></div>
+                ผู้ให้บริการเงินอิเล็คทรอนิกส์ (e – Wallet)
+            </label>
+        </div>
+        <div class="row" id="eWallet" style="display:none">
+            <ul>
+                <li>Rabbit LINE Pay ระบุ: <input type="text" id="txt_rabbit" name="txt_rabbit"></li>
+                <li>TrueMoney Wallet ระบุ: <input type="text" id="txt_truemoney" name="txt_truemoney"></li>
+                <li>PayPal ระบุ: <input type="text" id="txt_paypal_2" name="txt_paypal_2"></li>
+                <li>AirPay wallet ระบุ: <input type="text" id="txt_airpay" name="txt_airpay"></li>
+                <li>อื่น ๆ ระบุ: <input type="text" id="txt_other_ewallet" name="txt_other_ewallet"></li>
+            </ul>
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_cash" onclick="myFunction('cb_cash','')">
+                <div class="checkbox_box"></div>
+                เก็บเงินปลายทางเป็นเงินสด
+            </label>
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_pay_platform"
+                    onclick="myFunction('cb_pay_platform','')">
+                <div class="checkbox_box"></div>
+                ระบบการรับชำระเงินภายในแพลตฟอร์มของผู้ให้บริการ
+            </label>
+        </div>
+        <div class="row">
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox_input" id="cb_other_pay"
+                    onclick="myFunction('cb_other_pay','other_pay')">
+                <div class="checkbox_box"></div>
+                อื่น ๆ
+            </label>
+        </div>
+        <div class="row" id='other_pay' style="display:none">
+            <ul>
+                <li>ระบุ: <input type="text" id="txt_other_pay" name="txt_other_pay"></li>
+        </div>
+    </div>
+    <center>
+        <input type="submit" name="commit" value="SUBMIT" onclick="validate();" />
+    </center>
 {{>layout/foot-layout}}

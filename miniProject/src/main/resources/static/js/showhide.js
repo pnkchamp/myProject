@@ -1,40 +1,11 @@
 
-        function myFunction() {
-        var checkBox = document.getElementById("myCheckboxId");
-        var commerce = document.getElementById("commerce");
-            if (checkBox.checked == true){
-                commerce.style.display = "block";
-            } else {
-                commerce.style.display = "none";
-            }
-        }
-
-        function myFunction1() {
-        var checkBox = document.getElementById("myCheckboxId1");
-        var commerce = document.getElementById("commerce1");
-            if (checkBox.checked == true){
-                commerce.style.display = "block";
-            } else {
-                commerce.style.display = "none";
-            }
-        }
-
-         function myFunction2() {
-        var checkBox = document.getElementById("myCheckboxId2");
-        var commerce = document.getElementById("commerce2");
-            if (checkBox.checked == true){
-                commerce.style.display = "block";
-            } else {
-                commerce.style.display = "none";
-            }
-        }
-
-         function myFunction3() {
-        var checkBox = document.getElementById("myCheckboxId3");
-        var commerce = document.getElementById("commerce3");
-            if (checkBox.checked == true){
-                commerce.style.display = "block";
-            } else {
-                commerce.style.display = "none";
-            }
-        }
+function myFunction(cb, dv) {
+    var checkBox = document.getElementById(cb);
+    var dv = document.getElementById(dv);
+    console.log(cb, dv.id); //check_parameter
+    if (checkBox.checked == true) {
+        dv.style.display = "block";
+    } else {
+        dv.style.display = "none";
+    }
+}
