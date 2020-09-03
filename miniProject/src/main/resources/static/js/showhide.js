@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function myFunction(cb, dv) {
     var checkBox = document.getElementById(cb);
@@ -9,3 +10,14 @@ function myFunction(cb, dv) {
         dv.style.display = "none";
     }
 }
+=======
+function Mycheckbox(checkbox,dv) {
+            var checkbox = document.getElementById(checkbox); 
+            var dv = document.getElementById(dv);     
+            if (checkbox.checked == true){
+                dv.style.display = "block";
+            } else {
+                dv.style.display = "none";
+            }
+        }
+>>>>>>> 57dbdc6a4b9fb33e6dd144d425f717c8efe97862
