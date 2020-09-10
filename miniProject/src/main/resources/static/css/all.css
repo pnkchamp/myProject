@@ -1,0 +1,116 @@
+body{
+    font-size: 18px;
+    font-family: 'Taviraj', serif;
+}
+
+label{
+    cursor: pointer;
+}
+
+.commerce{
+    margin-left: 70px;
+    font-size: 16px;
+
+}
+
+/*########################## Effect Border  ######################### */
+
+.form{
+    margin-left:3px;
+    width : 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form input{
+    width:100%;
+    height:100%;
+    border:none;
+    border-bottom: 1px solid #cccc;
+    outline:none;
+}
+
+.form .border-input{
+    position: absolute;  
+    bottom:0;
+    left: 0px;  
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    transition:  all 0.3s ease;
+
+}
+.form .border-input::after{
+    content: "";
+    position: absolute;
+    left: 0 ;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.border-input{
+    position: absolute;
+    bottom: 5px;
+    left:0px;
+    transition: all .3s ease;
+}
+ 
+.form input:focus + .border-input::after,
+.form input:valid + .border-input::after{
+    transform: translateX(0%);
+}
+
+/*#################  CHECK BOX  ##################### */
+.checkbox {
+    display:inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.checkbox_input{
+    display: none;
+}
+
+.checkbox_box{
+    width: 1.50em;
+    height: 1.50em;
+    border:2px solid #cccccc;
+    border-radius: 3px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;     
+    transition: background-color 0.20s,border-color 0.20s;
+}
+.checkbox_box:hover {
+    border:2px solid #5fa8d3;
+
+}
+
+.checkbox_box::after{
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    color: #ffffff;
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+.checkbox_box::after > ul{
+    font-size: 20px;
+}
+.checkbox_input:checked + .checkbox_box{
+    background-color: #5fa8d3;
+    border-color: #5fa8d3;
+    
+}
+
+
+.checkbox_input:checked + .checkbox_box::after{
+    transform: scale(1);
+    
+}
+
+/*###################################################### */
