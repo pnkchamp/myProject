@@ -1,64 +1,322 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    {{!-- CSSS --}}
+    <meta charset="UTF-8">    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/all.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Taviraj&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&family=Taviraj&display=swap" rel="stylesheet">
     <title>{{title}}</title>
 </head>
 <body>
-  
-  <div class= "container mt-3">
-      <h2>รายละเอียดการขายสินค้าออนไลน์</h2><hr>
-        <h4>๑. ช่องทางการจำหน่ายสินค้าหรือให้บริการผ่านออนไลน์ (โปรดระบุให้ครบทุกช่องทาง)</h4>
+
+      <div class="container-flud">
+            <div class="header">
+                  <b>รายละเอียดการขายสินค้าออนไลน์</b>
+            </div>
+      </div>
+      <div class="container my-3">
+        <div class="row mb-2">
+            <b>๑. ช่องทางการจำหน่ายสินค้าหรือให้บริการผ่านออนไลน์ (โปรดระบุให้ครบทุกช่องทาง)</b>
+        </div>
+        {{!-- E Commerce Platform --}}
+        <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input" id="commerce_box" onclick="showCommerce('commerce_box','commerce')">
+                    <div class="checkbox_box"></div>
+                    e–Commerce Platform
+                </label>
+        </div>
+        <div class="commerce" id="commerce">
+          <div class="row">
+                <label for="lazada">
+                  <img src="image/lazada.png" class="mr-1" width="25" height="25">
+                  Lazada ระบุ URL :
+                </label>
+                <input type="text" id="lazada" >
+          </div>
+          <div class="row">
+                <label  for="shopee">
+                  <img src="image/shopee.png" class="mr-1" width="25" height="25">
+                  Shopee ระบุ URL :
+                </label>
+                <input type="text" id="shopee" name="" >
+          </div>
+          <div class="row">
+                <label for="jd">
+                  <img src="image/jd.png" class="mr-1" width="25" height="25">
+                  JD CENTRAL ระบุ URL :
+                </label>
+                <input type="text" id="jd" name="" >
+          </div>
+          <div class="row">
+                <label  for="inwshop">
+                  <img src="image/inw.png" class="mr-1" width="25" height="25">
+                  Inw Shop ระบุ URL :
+                </label>
+                <input type="text" id="inwshop" name="" >
+          </div>
+          <div class="row">
+                <label class="mb-0" for="other">อื่น ๆ ระบุ URL :</label>
+                <input type="text" id="other" name="" required>
+          </div>
+        </div>
+         {{!-- Platform จองโรงแรม --}}
+        <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input" id="platform_box" onclick="showCommerce('platform_box','platform')">
+                    <div class="checkbox_box"></div>
+                    Platform จองโรงแรม
+                </label>
+        </div>
+        <div class="commerce" id="platform">
+          <div class="row">
+                <label for="agoda">
+                  <img src="image/agoda.png" class="mr-1" width="25" height="25">
+                  Agoda ระบุ URL :
+                </label>
+                <input type="text" id="agoda" >
+          </div>
+          <div class="row">
+                <label  for="booking">
+                  <img src="image/booking.png" class="mr-1" width="25" height="25">
+                  Booking.com ระบุ URL :
+                </label>
+                <input type="text" id="booking" name="" >
+          </div>
+         <div class="row">
+                <label for="expedia">
+                  <img src="image/expedia.png" class="mr-1" width="25" height="25">
+                  Expedia ระบุ URL :
+                </label>
+                <input type="text" id="expedia" name="" >
+          </div>
+          <div class="row">
+                <label for="airbnb">
+                 <img src="image/airbnb.png" class="mr-1" width="25" height="25">
+                  AirBnb ระบุ URL :
+                  </label>
+                <input type="text" id="airbnb" name="" >
+          </div>
+          <div class="row">
+                <label  for="traveloka">
+                 <img src="image/traveloka.png" class="mr-1" width="25" height="25">
+                  Traveloka ระบุ URL :
+                </label>
+                <input type="text" id="traveloka" name="" required>
+          </div>
+          <div class="row">
+                <label for="other1">อื่นๆ โปรดระบุ :</label>
+                <input type="text" id="other1" name="" required>
+          </div>
+        </div>
+        {{!-- บริการ Delivery --}}
+        <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input" id="delivery_box" onclick="showCommerce('delivery_box','delivery')">
+                    <div class="checkbox_box"></div>
+                    บริการ Delivery / Food Delivery
+                </label>
+        </div>
+        <div class="commerce" id="delivery">
+          <div class="row">
+                <label  for="grabfood">
+                  <img src="image/grab.png" class="mr-1" width="25" height="25">
+                   GrabFood
+                </label>
+                <input type="text" id="grabfood" >
+          </div>
+          <div class="row">
+                <label for="lineman">
+                  <img src="image/lineman.png" class="mr-1" width="25" height="25">
+                  LineMan
+                </label>
+                <input type="text" id="lineman" name="" >
+          </div>
+          <div class="row">
+                <label for="foodpanda">
+                    <img src="image/foodpanda.png" class="mr-1" width="25" height="25">
+                    FoodPanda
+                </label>
+                <input type="text" id="foodpanda" name="" >
+          </div>
+          <div class="row">
+                <label for="get">
+                  <img src="image/get.png" class="mr-1" width="25" height="25">
+                   Get
+                </label>
+                <input type="text" id="get" name="" >
+          </div>
+          <div class="row">
+                <label for="other2">อื่นๆ โปรดระบุ:</label>
+                <input type="text" id="other2" name="" required>
+          </div>
+        </div>
+        {{!-- Social Media --}}
+        <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input" id="social_box" onclick="showCommerce('social_box','social')">
+                    <div class="checkbox_box"></div>
+                    Social Media
+                </label>
+        </div>
+        <div class="commerce" id="social">
+         <div class="row">
+                <label for="facebook">
+                  <img src="image/facebook.png" class="mr-1" width="25" height="25">
+                  Facebook ระบุ URL :
+                </label>
+                <input type="text" id="facebook" >
+          </div>
+          <div class="row">
+                <label for="instagram">
+                  <img src="image/Instagram.png" class="mr-1" width="25" height="25">
+                  Instagram ระบุ URL :
+                </label>
+                <input type="text" id="instagram" name="" >
+          </div>
+          <div class="row">
+                <label for="line">
+                  <img src="image/line.png" class="mr-1" width="25" height="25">
+                  Line ระบุ link Line / ID Line
+                </label>
+                <input type="text" id="line" name="" >
+          </div>
+          <div class="row">
+                <label for="youtube">
+                  <img src="image/youtube.png" class="mr-1" width="25" height="25">
+                  Youtube ระบุ URL :
+                </label>
+                <input type="text" id="youtube" name="" >
+          </div>
+          <div class="row">
+                <label for="other3">อื่น ๆ ระบุ URL :</label>
+                <input type="text" id="other3" name="" required>
+          </div>
+        </div>
+        {{!-- Web Site --}}
+        <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input" id="other_box1" onclick="showCommerce('other_box1','other-1')">
+                    <div class="checkbox_box"></div>
+                    มีเว็บไซต์ของตนเอง
+                </label>
+        </div>
+        <div class="commerce" id="other-1">
+          <div class="row">
+                <label for="other4">โปรดระบุ URL :</label>
+                <input type="text" id="other4" name="" >
+          </div>    
+        </div>
+      </div>
+      <div class="container my-3">
+            <div class="row mb-2">
+                  <b>๒. ช่องทางการรับชำระเงิน (โปรดระบุให้ครบทุกช่องทาง)</b>
+            </div> 
+      {{!-- Online Banking --}}
       <div class="row">
-        <input type="checkbox" class="custom-checkbox ml-3" id="checked">
-        <label for="checked" class="col-8">e – Com merce Platform</label>
-       </div>
-        <div class="commerce">
-          <div class="row mb-1">
-            <label class="mb-0" for="lazada">Lazada ระบุ URL :</label>
-                <div class="form">
-                    <input type="text" id="lazada" required>
-                    <span class="border-input"></span>
-                </div>
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input" id="banking_box" onclick="showCommerce('banking_box','banking')">
+                    <div class="checkbox_box"></div>
+                    สถาบันการเงิน (รวมทุกช่องทาง Online Banking / Mobile Banking / Internet Banking ฯลฯ)
+                </label>
+        </div>
+        <div class="commerce" id="banking">
+          <div class="row">
+                <label  for="">ชื่อบัญชี</label>
+                <input type="text" id="" name="" >
+                <label  for="">เลขที่บัญชี/เลขพร้อมเพย์</label>
+                <input type="text" id="" name="" >
+                <label  for="">ชื่อธนาคาร</label>
+                <input type="text" id="" name="" >
+          </div> 
+           <div class="row">
+                <label  for="">ชื่อบัญชี</label>
+                    <input type="text" id="" name="" >
+                <label for="">เลขที่บัญชี/เลขพร้อมเพย์</label>
+                    <input type="text" id="" name="" >
+                <label for="">ชื่อธนาคาร</label>
+                    <input type="text" id="" name="" >
+          </div>    
+        </div>
+         {{!-- E-Wallet --}}
+        <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input" id="wallet_box" onclick="showCommerce('wallet_box','wallet')">
+                    <div class="checkbox_box"></div>
+                    ผู้ให้บริการเงินอิเล็คทรอนิกส์ (e – Wallet)
+                </label>
+        </div>
+        <div class="commerce" id="wallet">
+          <div class="row">
+                <label cfor="">
+                   <img src="image/rabbit.png" class="mr-1" width="25" height="25">
+                    Rabbit LINE Pay
+                </label>
+                <input type="text" id="" name="" >
+          </div> 
+          <div class="row">
+                <label class="" for="">
+                   <img src="image/truemony.png" class="mr-1" width="25" height="25">
+                  TrueMoney Wallet
+                </label>
+                <input type="text" id="" name="" >
+         </div>
+         <div class="row">
+                <label class="" for="">
+                  <img src="image/paypal.png" class="mr-1" width="25" height="25">
+                   PayPal
+                </label>
+                <input type="text" id="" name="" >
           </div>
-        <div class="row mb-1">
-            <label class="mb-0" for="shopee">Shopee ระบุ URL :</label>
-                <div class="form">
-                    <input type="text" id="shopee" name="" required>
-                    <span class="border-input"></span>
-                </div>
+          <div class="row">
+                <label class="mb-0" for="">
+                    <img src="image/airpay.png" class="mr-1" width="25" height="25">
+                    AirPay wallet
+                </label>
+                <input type="text" id="" name="" >
           </div>
-          <div class="row mb-1">
-          <label class="mb-0" for="jd">JD CENTRAL ระบุ URL :</label>
-                <div class="form">
-                    <input type="text" id="jd" name="" required>
-                    <span class="border-input"></span>
-                </div>
+          <div class="row">
+                <label for="">อื่น ๆ ระบุ URL :</label>
+                <input type="text" id="" name="" required>
           </div>
-          <div class="row mb-1">
-          <label class="mb-0" for="inwshop">Inw Shop ระบุ URL :</label>
-                <div class="form">
-                    <input type="text" id="inwshop" name="" required>
-                    <span class="border-input"></span>
-                </div>
+        </div>
+        <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input">
+                    <div class="checkbox_box"></div>
+                    เก็บเงินปลายทางเป็นเงินสด
+                </label>
+        </div>
+         <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input">
+                    <div class="checkbox_box"></div>
+                    ระบบการรับชำระเงินภายในแพลตฟอร์มของผู้ให้บริการ
+                </label>
+        </div>
+        <div class="row">
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox_input" id="other_box2" onclick="showCommerce('other_box2','otherbox2')">
+                    <div class="checkbox_box"></div>
+                    อื่นๆ
+                </label>
+        </div>
+        <div class="commerce" id="otherbox2">
+          <div class="row">
+                <label for="">โปรดระบุ:</label>
+                <input type="text" id="" name="" required>
           </div>
-          <div class="row mb-1">
-          <label class="mb-0" for="other">อื่น ๆ ระบุ URL :</label>
-                <div class="form">
-                    <input type="text" id="other" name="" required>
-                    <span class="border-input"></span>
-                </div>
-          </div>
-        </div>        
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-success">Success</button>
+      </div>
   </div>
 
 
 </body>
+ {{!-- JavaScript --}}
   <script src="https://kit.fontawesome.com/350e34b2bb.js" crossorigin="anonymous"></script>
   <script src="js/formcommerce.js" ></script>
 </html>
