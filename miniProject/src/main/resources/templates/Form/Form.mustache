@@ -25,10 +25,11 @@
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox_input" id="commerce_box" onclick="showCommerce('commerce_box','commerce')">
                     <div class="checkbox_box"></div>
-                    e–Commerce Platform
+                    e–Commerce Platform <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
+
         </div>
-        <div class="commerce" id="commerce">
+        <div class="commerce hide" id="commerce">
           <div class="row">
                 <label for="lazada">
                   <img src="image/lazada.png" class="mr-1" width="25" height="25">
@@ -67,10 +68,10 @@
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox_input" id="platform_box" onclick="showCommerce('platform_box','platform')">
                     <div class="checkbox_box"></div>
-                    Platform จองโรงแรม
+                    Platform จองโรงแรม<label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce" id="platform">
+        <div class="commerce hide" id="platform">
           <div class="row">
                 <label for="agoda">
                   <img src="image/agoda.png" class="mr-1" width="25" height="25">
@@ -116,10 +117,10 @@
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox_input" id="delivery_box" onclick="showCommerce('delivery_box','delivery')">
                     <div class="checkbox_box"></div>
-                    บริการ Delivery / Food Delivery
+                    บริการ Delivery / Food Delivery <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce" id="delivery">
+        <div class="commerce hide" id="delivery">
           <div class="row">
                 <label  for="grabfood">
                   <img src="image/grab.png" class="mr-1" width="25" height="25">
@@ -157,11 +158,11 @@
         <div class="row">
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox_input" id="social_box" onclick="showCommerce('social_box','social')">
-                    <div class="checkbox_box"></div>
-                    Social Media
+                    <div class="checkbox_box"></div> 
+                    Social Media <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce" id="social">
+        <div class="commerce hide" id="social">
          <div class="row">
                 <label for="facebook">
                   <img src="image/facebook.png" class="mr-1" width="25" height="25">
@@ -200,10 +201,10 @@
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox_input" id="other_box1" onclick="showCommerce('other_box1','other-1')">
                     <div class="checkbox_box"></div>
-                    มีเว็บไซต์ของตนเอง
+                    มีเว็บไซต์ของตนเอง <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce" id="other-1">
+        <div class="commerce hide" id="other-1">
           <div class="row">
                 <label for="other4">โปรดระบุ URL :</label>
                 <input type="text" id="other4" name="" >
@@ -212,17 +213,17 @@
       </div>
       <div class="container my-3">
             <div class="row mb-2">
-                  <b>๒. ช่องทางการรับชำระเงิน (โปรดระบุให้ครบทุกช่องทาง)</b>
+                  <b>๒. ช่องทางการรับชำระเงิน(โปรดระบุให้ครบทุกช่องทาง)</b>
             </div> 
       {{!-- Online Banking --}}
       <div class="row">
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox_input" id="banking_box" onclick="showCommerce('banking_box','banking')">
                     <div class="checkbox_box"></div>
-                    สถาบันการเงิน (รวมทุกช่องทาง Online Banking / Mobile Banking / Internet Banking ฯลฯ)
+                    สถาบันการเงิน (รวมทุกช่องทาง Online Banking / Mobile Banking / Internet Banking ฯลฯ) <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce" id="banking">
+        <div class="commerce hide" id="banking">
           <div class="row">
                 <label  for="">ชื่อบัญชี</label>
                 <input type="text" id="" name="" >
@@ -245,10 +246,10 @@
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox_input" id="wallet_box" onclick="showCommerce('wallet_box','wallet')">
                     <div class="checkbox_box"></div>
-                    ผู้ให้บริการเงินอิเล็คทรอนิกส์ (e – Wallet)
+                    ผู้ให้บริการเงินอิเล็คทรอนิกส์ (e – Wallet) <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce" id="wallet">
+        <div class="commerce hide" id="wallet">
           <div class="row">
                 <label cfor="">
                    <img src="image/rabbit.png" class="mr-1" width="25" height="25">
@@ -300,10 +301,10 @@
                 <label class="checkbox">
                     <input type="checkbox" class="checkbox_input" id="other_box2" onclick="showCommerce('other_box2','otherbox2')">
                     <div class="checkbox_box"></div>
-                    อื่นๆ
+                    อื่นๆ <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce" id="otherbox2">
+        <div class="commerce hide" id="otherbox2">
           <div class="row">
                 <label for="">โปรดระบุ:</label>
                 <input type="text" id="" name="" required>

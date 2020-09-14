@@ -12,6 +12,13 @@ div label + input  {
     margin-bottom: 4px;
 }
 
+
+.hide{
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
 .btn{
     width: 100%;
     margin-top: 10px;
@@ -21,20 +28,13 @@ div label + input  {
     margin-top: 10px;
     font-size: 15px;
     margin-left: 60px;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
-
 }
 
 
 .show{
-    margin-top: 10px;
-    font-size: 15px;
-    margin-left: 60px;
-     visibility: visible;
-     opacity: 1;
-     transition:  opacity 0.5s ease;
+    visibility: visible;
+    opacity: 1;
+    transition:  opacity 0.5s ease;
 }
 
 }
@@ -122,3 +122,15 @@ label + input[type=text]{
 }
 
 /*###################################################### */
+label .checkbox_input:checked + div + label{
+    display:inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: red;
+    cursor: auto;
+    margin-left: 5px;
+    visibility: visible;
+    opacity: 1;
+    transition:  opacity 0.5s ease;
+    
+}
