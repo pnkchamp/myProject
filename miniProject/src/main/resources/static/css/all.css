@@ -3,20 +3,31 @@ body{
     font-size: 18px;
 }
 
+
 label{
     cursor: pointer;
     margin-bottom: 0px;
 }
 
-div label + input  {
-    margin-bottom: 4px;
-}
+
+    div label + input  {
+        margin-bottom: 4px;
+    }
 
 
 .hide{
     height: 0;
     visibility: hidden;
     opacity: 0;
+    
+}
+
+.showerror{
+    color:red;
+    font-size: 14px;
+    margin-left: 10px;
+    opacity: 1;
+    
 }
 
 .btn{
@@ -24,20 +35,36 @@ div label + input  {
     margin-top: 10px;
     background-color:  #16AF26;
 }
-.commerce{
-    margin-top: 10px;
-    font-size: 15px;
-    margin-left: 60px;
+
+.commerce{ 
+    max-height: 0;
+    margin-left: 50px;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: auto;
+    order: 1;
 }
 
-
-.show{
-    visibility: visible;
+.commerce.active{ 
+    max-height: 240px;
     opacity: 1;
-    transition:  opacity 0.5s ease;
+    overflow-y: scroll;
 }
 
+.commerce::-webkit-scrollbar {
+    display: none;
+  }
+  
+.show{
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
 }
+
 .container{
     background-color: #ffffff;
     border-radius: 25px;
@@ -52,22 +79,23 @@ div label + input  {
 }
 b{
     font-size: 24px;
-
 }
-
 .row{
     margin-bottom: 5px;
 }
 .row .checkbox{
     margin-left: 25px;
 }
-
+.commerce .row{
+    margin:0;
+}
 /*########################## Input Text ######################### */
 
 label + input[type=text]{
     border: 0;
     outline: none;
     margin-left: 10px;
+    margin-right: 10px;
     border-bottom: 1px solid #cccccc;
 }
 /*#################  CHECK BOX  ##################### */
@@ -120,9 +148,7 @@ label + input[type=text]{
     transform: scale(1);
     
 }
-
-/*###################################################### */
-label .checkbox_input:checked + div + label{
+/*label .checkbox_input:checked + div + label{
     display:inline-flex;
     align-items: center;
     font-size: 14px;
@@ -131,6 +157,18 @@ label .checkbox_input:checked + div + label{
     margin-left: 5px;
     visibility: visible;
     opacity: 1;
-    transition:  opacity 0.5s ease;
+    transition:  opacity 0.3s ease;
     
+}*/
+/*###################  icon image  ##################### */
+label img{
+    height: 25px;
+    width: 25px;
 }
+
+/*################################################## */
+label .checkbox_input::not(:checked) + div + label{
+    visibility: visible;
+    opacity: 0;
+}
+/*################################################## */

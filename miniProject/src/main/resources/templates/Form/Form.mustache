@@ -4,9 +4,9 @@
     {{!-- CSSS --}}
     <meta charset="UTF-8">    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/all.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&family=Taviraj&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="css/all.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&family=Taviraj&display=swap" rel="stylesheet">
     <title>{{title}}</title>
 </head>
 <body>
@@ -16,195 +16,197 @@
                   <b>รายละเอียดการขายสินค้าออนไลน์</b>
             </div>
       </div>
+      
       <div class="container my-3">
+      <form onsubmit="return validateForm()" method="post" action="2" >
         <div class="row mb-2">
             <b>๑. ช่องทางการจำหน่ายสินค้าหรือให้บริการผ่านออนไลน์ (โปรดระบุให้ครบทุกช่องทาง)</b>
         </div>
         {{!-- E Commerce Platform --}}
         <div class="row">
-                <label class="checkbox">
-                    <input type="checkbox" class="checkbox_input" id="commerce_box" onclick="showCommerce('commerce_box','commerce')">
+                <label class="checkbox" id="commerce-1">
+                    <input type="checkbox" class="checkbox_input" id="commerce_box" onclick="showCommerce('commerce_box','commerce','commerce_error')">
                     <div class="checkbox_box"></div>
-                    e–Commerce Platform <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
+                    e–Commerce Platform <label class="hide" id="commerce_error">(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
 
         </div>
-        <div class="commerce hide" id="commerce">
+        <div class="commerce" id="commerce">
           <div class="row">
                 <label for="lazada">
-                  <img src="image/lazada.png" class="mr-1" width="25" height="25">
+                  <img src="image/lazada.png" class="icon mr-1">
                   Lazada ระบุ URL :
                 </label>
                 <input type="text" id="lazada" >
           </div>
           <div class="row">
                 <label  for="shopee">
-                  <img src="image/shopee.png" class="mr-1" width="25" height="25">
+                  <img src="image/shopee.png">
                   Shopee ระบุ URL :
                 </label>
                 <input type="text" id="shopee" name="" >
           </div>
           <div class="row">
                 <label for="jd">
-                  <img src="image/jd.png" class="mr-1" width="25" height="25">
+                  <img src="image/jd.png">
                   JD CENTRAL ระบุ URL :
                 </label>
                 <input type="text" id="jd" name="" >
           </div>
           <div class="row">
                 <label  for="inwshop">
-                  <img src="image/inw.png" class="mr-1" width="25" height="25">
+                  <img src="image/inw.png">
                   Inw Shop ระบุ URL :
                 </label>
                 <input type="text" id="inwshop" name="" >
           </div>
           <div class="row">
                 <label class="mb-0" for="other">อื่น ๆ ระบุ URL :</label>
-                <input type="text" id="other" name="" required>
+                <input type="text" id="other" name="" >
           </div>
         </div>
          {{!-- Platform จองโรงแรม --}}
         <div class="row">
                 <label class="checkbox">
-                    <input type="checkbox" class="checkbox_input" id="platform_box" onclick="showCommerce('platform_box','platform')">
+                    <input type="checkbox" class="checkbox_input" id="platform_box" onclick="showCommerce('platform_box','platform','platform_error')">
                     <div class="checkbox_box"></div>
-                    Platform จองโรงแรม<label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
+                    Platform จองโรงแรม<label class="hide" id="platform_error" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce hide" id="platform">
+        <div class="commerce" id="platform">
           <div class="row">
                 <label for="agoda">
-                  <img src="image/agoda.png" class="mr-1" width="25" height="25">
+                  <img src="image/agoda.png">
                   Agoda ระบุ URL :
                 </label>
                 <input type="text" id="agoda" >
           </div>
           <div class="row">
                 <label  for="booking">
-                  <img src="image/booking.png" class="mr-1" width="25" height="25">
+                  <img src="image/booking.png">
                   Booking.com ระบุ URL :
                 </label>
                 <input type="text" id="booking" name="" >
           </div>
          <div class="row">
                 <label for="expedia">
-                  <img src="image/expedia.png" class="mr-1" width="25" height="25">
+                  <img src="image/expedia.png">
                   Expedia ระบุ URL :
                 </label>
-                <input type="text" id="expedia" name="" >
+                <input type="text" id="expedia">
           </div>
           <div class="row">
                 <label for="airbnb">
-                 <img src="image/airbnb.png" class="mr-1" width="25" height="25">
+                 <img src="image/airbnb.png">
                   AirBnb ระบุ URL :
                   </label>
                 <input type="text" id="airbnb" name="" >
           </div>
           <div class="row">
                 <label  for="traveloka">
-                 <img src="image/traveloka.png" class="mr-1" width="25" height="25">
+                 <img src="image/traveloka.png">
                   Traveloka ระบุ URL :
                 </label>
-                <input type="text" id="traveloka" name="" required>
+                <input type="text" id="traveloka" name="" >
           </div>
           <div class="row">
                 <label for="other1">อื่นๆ โปรดระบุ :</label>
-                <input type="text" id="other1" name="" required>
+                <input type="text" id="other1" name="" >
           </div>
         </div>
         {{!-- บริการ Delivery --}}
         <div class="row">
                 <label class="checkbox">
-                    <input type="checkbox" class="checkbox_input" id="delivery_box" onclick="showCommerce('delivery_box','delivery')">
+                    <input type="checkbox" class="checkbox_input" id="delivery_box" onclick="showCommerce('delivery_box','delivery','delivery_error')">
                     <div class="checkbox_box"></div>
-                    บริการ Delivery / Food Delivery <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
+                    บริการ Delivery / Food Delivery <label class="hide" id="delivery_error">(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce hide" id="delivery">
+        <div class="commerce" id="delivery">
           <div class="row">
                 <label  for="grabfood">
-                  <img src="image/grab.png" class="mr-1" width="25" height="25">
+                  <img src="image/grab.png">
                    GrabFood
                 </label>
                 <input type="text" id="grabfood" >
           </div>
           <div class="row">
                 <label for="lineman">
-                  <img src="image/lineman.png" class="mr-1" width="25" height="25">
+                  <img src="image/lineman.png">
                   LineMan
                 </label>
                 <input type="text" id="lineman" name="" >
           </div>
           <div class="row">
                 <label for="foodpanda">
-                    <img src="image/foodpanda.png" class="mr-1" width="25" height="25">
+                    <img src="image/foodpanda.png">
                     FoodPanda
                 </label>
                 <input type="text" id="foodpanda" name="" >
           </div>
           <div class="row">
                 <label for="get">
-                  <img src="image/get.png" class="mr-1" width="25" height="25">
+                  <img src="image/get.png">
                    Get
                 </label>
                 <input type="text" id="get" name="" >
           </div>
           <div class="row">
                 <label for="other2">อื่นๆ โปรดระบุ:</label>
-                <input type="text" id="other2" name="" required>
+                <input type="text" id="other2" name="" >
           </div>
         </div>
         {{!-- Social Media --}}
         <div class="row">
                 <label class="checkbox">
-                    <input type="checkbox" class="checkbox_input" id="social_box" onclick="showCommerce('social_box','social')">
+                    <input type="checkbox" class="checkbox_input" id="social_box" onclick="showCommerce('social_box','social','social_error')">
                     <div class="checkbox_box"></div> 
-                    Social Media <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
+                    Social Media <label class="hide" id="social_error" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce hide" id="social">
+        <div class="commerce" id="social">
          <div class="row">
                 <label for="facebook">
-                  <img src="image/facebook.png" class="mr-1" width="25" height="25">
+                  <img src="image/facebook.png">
                   Facebook ระบุ URL :
                 </label>
                 <input type="text" id="facebook" >
           </div>
           <div class="row">
                 <label for="instagram">
-                  <img src="image/Instagram.png" class="mr-1" width="25" height="25">
+                  <img src="image/Instagram.png">
                   Instagram ระบุ URL :
                 </label>
                 <input type="text" id="instagram" name="" >
           </div>
           <div class="row">
                 <label for="line">
-                  <img src="image/line.png" class="mr-1" width="25" height="25">
+                  <img src="image/line.png">
                   Line ระบุ link Line / ID Line
                 </label>
                 <input type="text" id="line" name="" >
           </div>
           <div class="row">
                 <label for="youtube">
-                  <img src="image/youtube.png" class="mr-1" width="25" height="25">
+                  <img src="image/youtube.png">
                   Youtube ระบุ URL :
                 </label>
                 <input type="text" id="youtube" name="" >
           </div>
           <div class="row">
                 <label for="other3">อื่น ๆ ระบุ URL :</label>
-                <input type="text" id="other3" name="" required>
+                <input type="text" id="other3" name="" >
           </div>
         </div>
         {{!-- Web Site --}}
         <div class="row">
                 <label class="checkbox">
-                    <input type="checkbox" class="checkbox_input" id="other_box1" onclick="showCommerce('other_box1','other-1')">
+                    <input type="checkbox" class="checkbox_input" id="other_box1" onclick="showCommerce('other_box1','other-1','other-1_error')">
                     <div class="checkbox_box"></div>
-                    มีเว็บไซต์ของตนเอง <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
+                    มีเว็บไซต์ของตนเอง <label class="hide" id="other-1_error" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce hide" id="other-1">
+        <div class="commerce" id="other-1">
           <div class="row">
                 <label for="other4">โปรดระบุ URL :</label>
                 <input type="text" id="other4" name="" >
@@ -218,69 +220,95 @@
       {{!-- Online Banking --}}
       <div class="row">
                 <label class="checkbox">
-                    <input type="checkbox" class="checkbox_input" id="banking_box" onclick="showCommerce('banking_box','banking')">
+                    <input type="checkbox" class="checkbox_input" id="banking_box" onclick="showCommerce('banking_box','banking','banking_error')">
                     <div class="checkbox_box"></div>
-                    สถาบันการเงิน (รวมทุกช่องทาง Online Banking / Mobile Banking / Internet Banking ฯลฯ) <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
+                    สถาบันการเงิน (รวมทุกช่องทาง Online Banking / Mobile Banking / Internet Banking ฯลฯ) <label class="hide" id="banking_error">(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce hide" id="banking">
-          <div class="row">
-                <label  for="">ชื่อบัญชี</label>
-                <input type="text" id="" name="" >
-                <label  for="">เลขที่บัญชี/เลขพร้อมเพย์</label>
-                <input type="text" id="" name="" >
-                <label  for="">ชื่อธนาคาร</label>
-                <input type="text" id="" name="" >
-          </div> 
+        <div class="commerce" id="banking">
+            <div class="row">
+                  <label  for="">ชื่อบัญชี</label>
+                  <input type="text" id="bankname" name="" size="30" >
+                  <label  for="">เลขที่บัญชี/เลขพร้อมเพย์</label>
+                  <input type="text" id="banknum" name="" >
+                  <label for="">ชื่อธนาคาร</label>
+                  <select class="form-control form-control-sm ml-2 col-8 col-lg-2 " id ="bankpro">
+                        <option selected value=''>กรุณาเลือกชื่อธนาคาร</option>
+                        <option>กสิกร</option>
+                        <option>กรุงเทพ</option>
+                        <option >กรุงไทย</option>
+                        <option >กรุงศรี</option>
+                        <option >ซีไอเอ็มบี</option>
+                        <option >ทหารไทย</option>
+                        <option >ไทยพานิชญ์</option>
+                        <option >ยูโอบี</option>
+                        <option >แลนด์แอนด์เฮ้า</option>
+                        <option >ออมสิน</option>
+                        <option >ธ.ก.ส</option>
+                  </select>    
+      </div> 
            <div class="row">
-                <label  for="">ชื่อบัญชี</label>
-                    <input type="text" id="" name="" >
-                <label for="">เลขที่บัญชี/เลขพร้อมเพย์</label>
-                    <input type="text" id="" name="" >
-                <label for="">ชื่อธนาคาร</label>
-                    <input type="text" id="" name="" >
+                  <label  for="">ชื่อบัญชี</label>
+                  <input type="text" id="bankname2" name="" size="30" >
+                  <label for="">เลขที่บัญชี/เลขพร้อมเพย์</label>
+                  <input type="text" id="banknum2" name=""  >
+                  <label for="">ชื่อธนาคาร</label>
+                  <select class="form-control form-control-sm ml-2 col-8 col-lg-2" id="bankpro">
+                        <option value='' selected>กรุณาเลือกชื่อธนาคาร</option>
+                        <option>กสิกร</option>
+                        <option>กรุงเทพ</option>
+                        <option >กรุงไทย</option>
+                        <option >กรุงศรี</option>
+                        <option >ซีไอเอ็มบี</option>
+                        <option >ทหารไทย</option>
+                        <option >ไทยพานิชญ์</option>
+                        <option >ยูโอบี</option>
+                        <option >แลนด์แอนด์เฮ้า</option>
+                        <option >ออมสิน</option>
+                        <option >ธ.ก.ส</option>
+                  </select>
           </div>    
         </div>
          {{!-- E-Wallet --}}
         <div class="row">
                 <label class="checkbox">
-                    <input type="checkbox" class="checkbox_input" id="wallet_box" onclick="showCommerce('wallet_box','wallet')">
+                    <input type="checkbox" class="checkbox_input" id="wallet_box" onclick="showCommerce('wallet_box','wallet','wallet_error')">
                     <div class="checkbox_box"></div>
-                    ผู้ให้บริการเงินอิเล็คทรอนิกส์ (e – Wallet) <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
+                    ผู้ให้บริการเงินอิเล็คทรอนิกส์ (e – Wallet) <label class="validatelabel hide" id="wallet_error" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce hide" id="wallet">
+        <div class="commerce" id="wallet">
           <div class="row">
-                <label cfor="">
-                   <img src="image/rabbit.png" class="mr-1" width="25" height="25">
+                <label for="">
+                   <img src="image/rabbit.png">
                     Rabbit LINE Pay
                 </label>
-                <input type="text" id="" name="" >
+                <input type="text" id="rabbit" name="" >
           </div> 
           <div class="row">
                 <label class="" for="">
-                   <img src="image/truemony.png" class="mr-1" width="25" height="25">
+                   <img src="image/truemony.png">
                   TrueMoney Wallet
                 </label>
-                <input type="text" id="" name="" >
+                <input type="text" id="truemony" name="" >
          </div>
          <div class="row">
                 <label class="" for="">
-                  <img src="image/paypal.png" class="mr-1" width="25" height="25">
+                  <img src="image/paypal.png">
                    PayPal
                 </label>
-                <input type="text" id="" name="" >
+                <input type="text" id="paypal" name="" >
           </div>
           <div class="row">
                 <label class="mb-0" for="">
-                    <img src="image/airpay.png" class="mr-1" width="25" height="25">
+                    <img src="image/airpay.png">
                     AirPay wallet
                 </label>
-                <input type="text" id="" name="" >
+                <input type="text" id="airpay" name="" >
           </div>
           <div class="row">
                 <label for="">อื่น ๆ ระบุ URL :</label>
-                <input type="text" id="" name="" required>
+                <input type="text" id="other4" name="" >
           </div>
         </div>
         <div class="row">
@@ -299,20 +327,22 @@
         </div>
         <div class="row">
                 <label class="checkbox">
-                    <input type="checkbox" class="checkbox_input" id="other_box2" onclick="showCommerce('other_box2','otherbox2')">
+                    <input type="checkbox" class="checkbox_input" id="other_box2" onclick="showCommerce('other_box2','otherbox2','otherbox2_error')">
                     <div class="checkbox_box"></div>
-                    อื่นๆ <label class="validatelabel hide" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
+                    อื่นๆ <label class="hide" id="otherbox2_error" >(กรุณากรอกข้อมูลมากกว่า 1 รายการ)</label>
                 </label>
         </div>
-        <div class="commerce hide" id="otherbox2">
+        <div class="commerce" id="otherbox2">
           <div class="row">
                 <label for="">โปรดระบุ:</label>
-                <input type="text" id="" name="" required>
+                <input type="text" id="other5" name="" >
           </div>
       </div>
+      
       <div class="row">
-        <button type="button" class="btn btn-success">Success</button>
+        <button type="submit" class="btn btn-success">Success</button>
       </div>
+</form>
   </div>
 
 
@@ -320,4 +350,6 @@
  {{!-- JavaScript --}}
   <script src="https://kit.fontawesome.com/350e34b2bb.js" crossorigin="anonymous"></script>
   <script src="js/formcommerce.js" ></script>
+  <script src="js/validate.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </html>

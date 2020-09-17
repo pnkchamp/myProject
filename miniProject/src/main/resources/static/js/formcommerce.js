@@ -1,14 +1,13 @@
-
-function showCommerce(checkbox,dv) {
+function showCommerce(checkbox,dv,error) {
     var checkBox = document.getElementById(checkbox);
     var dv = document.getElementById(dv);
+    var er = document.getElementById(error);
     if (checkBox.checked == true) {
-        dv.classList.add("show");
-        dv.classList.remove("hide");
-
+        dv.classList.add("active");
+        er.classList.add("hide");
     } else {
-        dv.classList.add("hide");
-        dv.classList.remove("show");    
-
+        dv.classList.remove("active");  
+        er.classList.add("hide");
     }
 }
+
